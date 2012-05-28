@@ -1,0 +1,23 @@
+h1. UIImage+ASImage
+
+UIImage category, which simplifies loading of non-bundled images using [UIImage imageNamed:]
+
+h2. Usage
+
+<pre>
+#import "UIImage+ASImage.h"
+
+...
+
+
+// To load a saved image from the "Caches" directory
+UIImage *myCachedImage = [UIImage as_cachedImageNamed:@"image.png"];
+
+// To load a saved image from the "Documents" directory
+UIImage *myDocumentsImage = [UIImage as_documentsImageNamed:@"another_image.png"];
+
+
+// Subsequent loading of the same images will use UIImage's system caching, which is nice... :)
+UIImage *reallyCachedImage = [UIImage as_cachedImageNamed:@"image.png"];
+
+</pre>
